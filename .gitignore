@@ -1,0 +1,15 @@
+#############
+## Idea
+#############
+target/
+.idea/
+.idea
+.gradle
+build
+.repository/
+*.iml
+*.iws
+*.jrtc
+*.class
+*.info
+gradlew.bat
