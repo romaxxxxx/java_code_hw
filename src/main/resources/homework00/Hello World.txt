@@ -1,0 +1,4 @@
+"C:\Program Files\Java\jdk-17.0.5\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\lib\idea_rt.jar=55848:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Roma\IdeaProjects\QA_Study\out\production\classes;C:\Users\Roma\IdeaProjects\QA_Study\out\production\resources homework00.Main
+Hello World!
+
+Process finished with exit code 0
