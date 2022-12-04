@@ -1,14 +1,11 @@
 package homework01;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         //Нахождение минимально присутствующих в массиве чисел
-        int[] elemArray = {-5, 4, -5, 8, 4, -5, 8, -1};
+        Integer[] elemArray = {-5, 4, 4, 8,-5, 9, 4, 8, 9, 9, -5, -1,-5};
         minArrayEl(elemArray);
 
         //Сортировка по ASCII
@@ -28,40 +25,28 @@ public class Main {
         System.out.println("Отсортированный массив по ASCII:" + Arrays.toString(charArray));
     }
 
-    private static void minArrayEl(int[] elemArray) {
-        int count = 1;
-        boolean bool = true;
-        boolean bool1 = true;
+    private static void minArrayEl(Integer[] elemArray) {
+        System.out.println("//////////Нахождение минимально присутствующих в массиве чисел:");
+        System.out.println("Начальный массив: " + Arrays.toString(elemArray));
         HashMap<Integer, Integer> elCount = new HashMap<>();
-        while (bool) {
-            bool = false;
-            for (int i = 0; i < (elemArray.length - 2); i++) {
-                if (elemArray[i] > elemArray[i + 1]) {
-                    int d = elemArray[i + 1];
-                    elemArray[i + 1] = elemArray[i];
-                    elemArray[i] = d;
-                    bool = true;
-                }
+        int count=0;
+        for (int i = 0; elemArray[i] != -1; i++) {
+            if(elemArray[i]!=400) {
+                elCount.put(elemArray[i], ++count);
             }
-        }
-        while (bool1) {
-            bool1 = false;
-            for (int i = 0; i < (elemArray.length - 1); i++) {
-                if (elemArray[i + 1] == -1) {
-                    bool1 = false;
+            for (int j =i + 1; j<elemArray.length; j++) {
+                if(elemArray[i]==400) break;
+                else if(elemArray[j]==-1) {
+                    elemArray[i] = 400;
+                    count=0;
                     break;
-                } else if (elemArray[i] == elemArray[i + 1]) {
+                }else if (elemArray[i] == elemArray[j]) {
                     elCount.put(elemArray[i], ++count);
-                } else {
-                    count = 0;
-                    elCount.put(elemArray[i + 1], ++count);
-                    bool1 = true;
+                    elemArray[j]=400;
                 }
             }
         }
         int minElCount = Collections.min(elCount.values());
-        System.out.println("//////////Нахождение минимально присутствующих в массиве чисел:");
-        System.out.println("Начальный массив: " + Arrays.toString(elemArray));
         System.out.println("Минимально повторяемые элементы в массиве:");
         for (Map.Entry<Integer, Integer> entry : elCount.entrySet()) {
             if (entry.getValue().equals(minElCount)) {
@@ -70,3 +55,4 @@ public class Main {
         }
     }
 }
+
