@@ -1,0 +1,7 @@
+1 //td[@data-sort-value >100000]/preceding::td[3]/a[@title]
+2 //td[position()=5 and text()="Сибирский"]/following-sibling::td[@data-sort-value >100000]/preceding::td[3]/a[@title]
+4- двумя запросами
+//span[contains(@class,'currency-name') and text() = 'USD']/../../following-sibling::td[position()=1 or position()=3]
+//span[contains(@class,'currency-name') and text() = 'EUR']/../../following-sibling::td[position()=1 or position()=3]
+- одним запросом
+//span[contains(@class,'currency-name') and text() = 'USD' or text() = 'EUR']/../../following-sibling::td[position()=1 or position()=3]
