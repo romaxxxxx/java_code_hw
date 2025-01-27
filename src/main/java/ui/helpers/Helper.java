@@ -13,6 +13,6 @@ public class Helper {
     public String card = faker.finance().creditCard();
     public String month = LocalDateTime.now().getMonth().toString();
     public String year = String.valueOf(LocalDateTime.now().getYear());
-    public String userName = faker.name().name() + (int) (Math.random() * 20);
+    public String userName = faker.name().name();
     public String password = faker.code().toString();
 }
