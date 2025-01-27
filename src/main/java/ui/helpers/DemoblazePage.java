@@ -1,4 +1,4 @@
-package Helpers;
+package ui.helpers;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;

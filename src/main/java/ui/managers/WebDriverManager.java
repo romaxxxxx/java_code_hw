@@ -1,4 +1,4 @@
-package managers;
+package ui.managers;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;

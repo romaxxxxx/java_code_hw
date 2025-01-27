@@ -1,4 +1,6 @@
-import managers.WebDriverManager;
+package ui;
+
+import ui.managers.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 

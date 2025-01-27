@@ -1,7 +1,7 @@
-import Helpers.DemoblazePage;
-import Helpers.Helper;
-import Helpers.DemoblazePage;
-import Helpers.Helper;
+package ui;
+
+import ui.helpers.DemoblazePage;
+import ui.helpers.Helper;
 import io.qameta.allure.Owner;
 import org.testng.annotations.Test;
 
